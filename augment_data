@@ -1,0 +1,29 @@
+import numpy as np
+A = np.arange(12).reshape((3,2,2))
+print(A)
+print()
+
+# # x-x flip of each frame, maintaining frame order
+# B = np.flip(A, 1)
+# print(B)
+# print()
+
+# # y-y flip of each frame, maintaining frame order
+# C = A.reshape(6,2)
+# C = np.fliplr(C)
+# C = C.reshape(3,2,2)
+# print(C)
+# print()
+
+# # x-y flip of each frame, maintaining frame order
+# D = np.flip(C, 1)
+# print(D)
+
+# # 90deg CCW of each frame, maintaining frame order
+E = np.rot90(A, k=1, axes=(1, 2))
+print(E)
+print()
+
+# # 90deg CW of each frame, maintaining frame order
+F = np.rot90(A, k=1, axes=(2, 1))
+print(F)
