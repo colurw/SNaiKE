@@ -17,3 +17,6 @@ Refactors the game into a Gymnasium Environment() to simplify integration with S
 
 ### PPO.py
 Initialises a convolutional neural network that learns how to use the control inputs, based on its interpretation the RGB screen array.
+
+### To Do
+Create video showing learning progress over many generations.
