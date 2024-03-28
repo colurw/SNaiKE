@@ -112,3 +112,6 @@ class SnakeEnv(gymnasium.Env):
 if __name__ == "__main__":
 
     check_env(SnakeEnv())
+
+print()
+## ghg
