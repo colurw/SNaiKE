@@ -91,6 +91,7 @@ class SnakeEnv(gymnasium.Env):
 
     def render(self):
         """ https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/#sphx-glr-tutorials-gymnasium-basics-environment-creation-py """
+        
         pass
     
 
@@ -113,5 +114,7 @@ if __name__ == "__main__":
 
     check_env(SnakeEnv())
 
-print()
-## ghg
+
+## calculate wrapped distance to egg to speed up learning
+## truncate - set time limit / maximum no. of frames for each rollout
+## render - use pygame display
