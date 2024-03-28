@@ -1,6 +1,10 @@
 # SNaiKE 
 
-Is an ascii version of the classic Nokia mobile game, written in NumPy and playable using in
-the terminal using keyboard controls.
+#### snake_cli.py
+Is an ascii version of the classic Nokia mobile game, playable using in the terminal using keyboard controls, that catures screen and command data.
 
-To be adapted into a Gymnasium Environment class, to interact with gradient-based reinforcement learning algorithms.
+#### snake_pyg_num.py
+Transforms the ascii display into a 3-channel numpy array, and uses pygame to record keypresses and draw a display.
+
+#### snake_gym.py
+Converts the game into a Gymnasium Environment() class for use with gradient-based reinforcement learning algorithms.
