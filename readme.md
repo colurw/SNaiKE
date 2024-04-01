@@ -1,6 +1,6 @@
 # snake_PPO
 
-Proximal Policy Optimisation is a state-of-the-art reinforcement learning algorithm designed to allow gradient learning methods to be applied to situations where an 'intelligent' agent makes autonomous decisions in an environment.  This permits a back-propogation of the environment's gradients through the network after each batch of interactions.  
+Proximal Policy Optimisation is a state-of-the-art reinforcement learning algorithm designed to allow gradient learning methods to be applied to situations where an 'intelligent' agent makes autonomous decisions in an environment.  This permits a back-propogation of the environment's gradients through the network (effectively) after each decision.  
 
 This speeds up the learning process when compared to gradient-free methods, such as <a href="https://github.com/colurw/flight_sim_GNN" title="colurw/flight_sim_GNN">flight_sim_GNN</a>, which suffer through a randomised exploration of the environment's manifold.  
 
