@@ -7,11 +7,11 @@ import math
 
 
 class SnakeEnv(gymnasium.Env):
-    def __init__(self, size=15):
+    def __init__(self, size=37):
         self.size = size
         self.action_space = spaces.Discrete(3)
-        self.observation_space = spaces.Box(low=0, high=255, shape=(self.size, self.size, 3), dtype=np.uint8)  ## flatten shape?
-        self.state = np.zeros(shape=(self.size ,self.size, 3), dtype=np.uint8)
+        self.observation_space = spaces.Box(low=0, high=255, shape=(3, self.size, self.size), dtype=np.uint8)  ## flatten shape?
+        self.state = np.zeros(shape=(3, self.size ,self.size), dtype=np.uint8)
         self.reward = 0
         self.egg_xy = np.array([random.randint(0, self.size-1), random.randint(0, self.size-1)])
         self.head_xy = np.array([math.floor(self.size/2), math.floor(self.size/2)])
@@ -95,12 +95,12 @@ class SnakeEnv(gymnasium.Env):
             else:
                 terminated = False
 
-        # record new screen state as 3-channel numpy array
-        self.state = np.zeros(shape=(self.size, self.size, 3), dtype=np.uint8)
-        self.state[self.egg_xy[1], self.egg_xy[0], 0] = 255
-        self.state[self.head_xy[1], self.head_xy[0], 1] = 255
+        # record new screen state as 3-channel numpy array (channels first)
+        self.state = np.zeros(shape=(3, self.size, self.size), dtype=np.uint8)
+        self.state[0, self.egg_xy[1], self.egg_xy[0]] = 255
+        self.state[1, self.head_xy[1], self.head_xy[0]] = 255
         for segment in self.body_xy:
-            self.state[segment[1], segment[0], 2] = 255
+            self.state[2, segment[1], segment[0]] = 255
 
         # calculate reward
         if self.score > 0: 
