@@ -5,4 +5,7 @@ test6.py
 test7_output_s
 HyperSleepEnv copy.py
 test.py
-
+wandb
+tensorboard
+models
+runs
