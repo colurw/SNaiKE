@@ -17,5 +17,6 @@ Refactors the game into a Gymnasium Environment() to simplify integration with r
 Initialises a convolutional neural network that learns how to use the control inputs, based on its interpretation the RGB screen array.
 
 ### To Do
-* Customise CNN policy to suit smaller screen.
+* ~~Customise CNN policy to suit smaller screen.~~
+* Integrate with 'Weights And Biases' or Tensorboard to aid with determining proper hyperparameters
 * Capture PyGame screens to show learning progress over many epochs.
