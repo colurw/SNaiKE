@@ -2,7 +2,7 @@
 
 Proximal Policy Optimisation is a state-of-the-art reinforcement learning algorithm designed to allow gradient learning methods to be applied to situations where an 'intelligent' agent makes autonomous decisions in an environment.  This permits a back-propogation of the environment's gradients through the network (effectively) after each decision.  
 
-This speeds up the learning process when compared to gradient-free methods, such as <a href="https://github.com/colurw/flight_sim_GNN" title="colurw/flight_sim_GNN">flight_sim_GNN</a>, which suffer through a randomised exploration of the environment's reward manifold.  
+This (theoretically) should speed up the learning process when compared to gradient-free methods, such as <a href="https://github.com/colurw/flight_sim_GNN" title="colurw/flight_sim_GNN">flight_sim_GNN</a>, which suffer through a randomised exploration of the environment's reward manifold.  
 
 ### snake_cli.py
 Is an ascii version of the classic Nokia mobile game, playable in the command line using keyboard controls, that captures screen and keypress datastreams.  Intended for a supervised learning project, that was abandoned after realising that I didn't want to spend hours playing it to create the data.  Hence...
